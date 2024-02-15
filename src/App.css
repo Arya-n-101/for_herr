@@ -1,38 +1,346 @@
+/* App.css */
 .App {
   text-align: center;
+  padding: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
+h1 {
+  color: #ff4081;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.photo-gallery {
+  max-width: 80%;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted minmax value */
+  gap: 50px;
+}
+
+.photo {
+  overflow: hidden;
+  width: 150%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.photo-container {
+
+  position: relative;
+  /* width: 150%; */
+  padding-top: 100%; /* Aspect ratio 1:1 (square) */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo.playing {
+  /* Add styles for the playing state if needed */
+}
+/* Add this to your CSS file */
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* LandingPage.css */
+.landing-page {
+  text-align: center;
+  padding: 50px;
+}
+
+.title {
+  color: #ff4081; /* Pink/orange color */
+  font-size: 2.5rem; /* Adjust font size */
+  font-family: cursive; /* Romantic font */
+}
+
+.message {
+  font-size: 1.5rem; /* Adjust font size */
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 1.2rem; /* Adjust font size */
+  margin-bottom: 20px;
+}
+
+.buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.yes-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff4081; /* Pink/orange color */
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.yes-button:hover {
+  background-color: #ff5c8a; /* Lighter shade of pink/orange */
+}
+/* Follow.css */
+.follow-text {
+  padding: 20px; /* Add padding */
+  font-family: 'Arial', sans-serif; /* 
+  Change font family */
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px; /* Change font size */
+  margin-bottom: 20px; /* Add margin bottom */
+  text-align: center;
+}
+.all{
+  display: flex;
+}
+.more{
+  margin:20px;
+  padding: 50px;
+  height: 100px;
+  text-align: center;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+.ask{
+  margin:20px;
+  padding: 50px;
+  height: 70px;
+  text-align: center;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+.ans{
+
+  margin:20px;
+  height: 150px;
+  padding: 50px;
+  text-align: center;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+.egg{
+  height: 100px;
+  margin:20px;
+  padding: 50px;
+  text-align: center;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+.more:hover{
+  width: 200px;
+  align-content: center;
+  padding-bottom: 0;
+  height: 150px;
+  text-align: center;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+.ask:hover{
+  margin:20px;
+  padding: 50px;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  font-family:sans-serif;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+.ans:hover{
+
+  margin:20px;
+  width: 200px;
+  height: 150px;
+  padding: 50px;
+  text-align: center;
+  font-family:sans-serif;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+.egg:hover{
+  height: 100px;
+  width: 200px;
+  margin:20px;
+  padding: 50px;
+  text-align: center;
+  font-family:sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+}
+/* Follow.css */
+.more,
+.ask,
+.ans,
+.egg {
+  margin: 20px;
+  padding: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  max-width: 200px;
+  border-radius: 100%;
+  border-color: #ff4081;
+  background-color: #ff4081;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Hover styles */
+.more:hover,
+.ask:hover,
+.ans:hover,
+.egg:hover {
+  width: 200px;
+  height: 150px;
+  padding: 50px;
+  font-size: 50px;
+  background-color: #ff5c8a; /* Lighter shade of pink/orange */
+}
+/* App.css */
+.photo-gallery {
+  max-width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensure only two images per row */
+  gap: 50px;
+}
+.photo-gallery {
+  max-width: 80%;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  grid-auto-rows: auto; /* Automatically size rows based on content */
+  gap: 50px;
+}
+
+
+.photo-gallery {
+  border: 2px solid #ffaaaa; /* Fancy border */
+  background-color: #ffdddd;
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+   /* Add some padding inside the border */
+   margin-bottom: 10px;
+}
+
+.photo-gallery {
+  display: grid;
+  gap: 20px;
+}
+
+
+/* App.css */
+
+section {
+  text-align: center; /* Center the content horizontally */
+  margin-top: 50px; /* Add margin to the top */
+}
+
+.end {
+  font-family: Arial, sans-serif; /* Change font family */
+  font-size: 18px; /* Adjust font size */
+  margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+.question {
+  font-size: 1.2rem; /* Adjust font size */
+  margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+section .buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  margin-bottom: 100px;
 }
